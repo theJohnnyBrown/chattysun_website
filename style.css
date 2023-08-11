@@ -63,7 +63,7 @@ nav a {
     background-color: #f0f0f0;
 }
 
-.feature:nth-child(odd) {
+.feature:nth-child(even) {
     background-color: rgba(80, 179, 162, 0.2);
 }
 
