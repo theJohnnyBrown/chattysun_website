@@ -39,7 +39,7 @@ nav a {
 
 .hero h1 {
     font-size: 28px;
-    margin: 20px 0;
+    margin: 40px 0; /* Equal spacing */
 }
 
 .hero .sun {
@@ -55,15 +55,17 @@ nav a {
 }
 
 #features {
-    padding: 20px;
-    text-align: center;
-    background: #f0f0f0;
+    background-color: #f0f0f0;
+}
+
+.feature:nth-child(odd) {
+    background-color: rgba(80, 179, 162, 0.2);
 }
 
 .feature {
     margin: 10px 0;
     padding: 20px;
-    background-color: rgba(80, 179, 162, 0.2);
+    text-align: center;
 }
 
 .feature .emoji {
@@ -72,8 +74,7 @@ nav a {
     margin: 10px auto;
 }
 
-#pricing h2 {
-    text-align: center;
+#pricing, #pricing h2 {
     background: #f0f0f0;
     padding: 20px;
     margin: 0;
@@ -83,8 +84,6 @@ nav a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: #f0f0f0;
-    padding: 20px;
 }
 
 .plan {
