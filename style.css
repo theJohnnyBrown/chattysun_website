@@ -99,6 +99,13 @@ h2 {
     justify-content: space-between;
 }
 
+@media (max-width: 960px) {
+  .pricing-plans {
+      flex-direction: column; /* Switches to vertical below 960px */
+      align-items: center;
+  }
+}
+
 .plan {
     border: 1px solid #ddd;
     padding: 15px;
