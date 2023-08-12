@@ -104,6 +104,10 @@ h2 {
       flex-direction: column; /* Switches to vertical below 960px */
       align-items: center;
   }
+
+  .pricing-plans .play {
+      width: 85%;
+  }
 }
 
 .plan {
