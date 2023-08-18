@@ -38,7 +38,11 @@ nav a {
 .hero {
     text-align: center;
     padding: 60px 0;
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
+    background-image: linear-gradient(rgb(200, 200, 200, 0.8),
+                                      rgb(200, 200, 200, 0.8)),
+                      url("img/stock_goods_3.jpg");
+    background-size: cover;
 }
 
 .hero h1 {
@@ -64,13 +68,53 @@ nav a {
 }
 
 .feature:nth-child(even) {
-    background-color: rgba(80, 179, 162, 0.2);
+    background-color: rgb(208, 228, 224);
+}
+
+.feature-customized {
+    background-image: linear-gradient(to right,
+                                      rgba(80, 179, 162, 0.2),
+                                      rgba(80, 179, 162, 0.2),
+                                      rgba(80, 179, 162, 0.2),
+                                      rgba(208, 228, 224, 1)),
+                      url("img/Guilloud_56.png");
+    background-size: cover;
+}
+
+.feature-installation {
+    background-image: linear-gradient(to left,
+                                      rgba(80, 179, 162, 0.2),
+                                      rgba(80, 179, 162, 0.2),
+                                      rgba(80, 179, 162, 0.2),
+                                      rgba(208, 228, 224, 1)),
+                      url("img/Faro_4122.png");
+    background-size: cover;
+}
+
+
+.feature div.feature-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.feature-container > div {
+    width: 50%;
+    padding: 30px 0;
 }
 
 .feature {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.feature > div {
     margin: 10px 0;
     padding: 20px;
-    text-align: center;
 }
 
 .feature .emoji {
@@ -105,7 +149,22 @@ h2 {
       align-items: center;
   }
 
-  .pricing-plans .play {
+  .feature .feature-container {
+      flex-direction: column; /* Switches to vertical below 960px */
+      align-items: center;
+  }
+
+  .feature .feature-container > div {
+          width: 100%;
+  }
+
+  .feature .feature-container > div.feature-customized,
+  .feature .feature-container > div.feature-installation {
+      padding: 108px 0;
+  }
+
+
+  .pricing-plans .plan {
       width: 85%;
   }
 }
