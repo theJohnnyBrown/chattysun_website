@@ -1,8 +1,27 @@
+:root {
+  --gradient-color-rgb: 200, 220, 240;
+  --gradient-color: rgba(var(--gradient-color-rgb), 1);
+
+  --main-bg-color-rgb: 224, 247, 250; /* light cyan
+  /* --main-bg-color-rgb: 224, 242, 241;  /* light mint green */
+  /* --main-bg-color-rgb: 245, 245, 220; /\*soft beige *\/ */
+  --main-bg-color: rgba(var(--main-bg-color-rgb), 1);
+
+  --secondary-bg-color-rgb: 80, 162, 179;
+  --secondary-bg-color: rgba(var(--secondary-bg-color-rgb), 1);
+
+  --feature-bg-color-rgb: 80, 162, 179;
+  --feature-bg-color: rgba(var(--feature-bg-color-rgb), 1);
+
+  --main-text-color-rgb: 255, 255, 255;
+  --main-text-color: rgba(var(--main-text-color-rgb), 1);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--main-bg-color);
 }
 
 .container {
@@ -12,8 +31,8 @@ body {
 }
 
 header {
-    background: #50b3a2;
-    color: white;
+    background: var(--secondary-bg-color);
+    color: var(--main-text-color);
     padding: 42px 0;
     text-align: center;
 }
@@ -30,63 +49,78 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: var(--main-text-color);
     margin: 0 15px;
     text-decoration: none;
 }
 
 .hero {
     text-align: center;
-    padding: 60px 0;
-    /* background: #f0f0f0; */
-    background-image: linear-gradient(rgb(200, 200, 200, 0.8),
-                                      rgb(200, 200, 200, 0.8)),
-                      url("img/stock_goods_3.jpg");
+    background-image: url("img/hero_ai.webp");
     background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+}
+
+.hero-inner {
+    background: linear-gradient(rgba(var(--main-bg-color-rgb), 0.3),
+                                rgba(var(--main-bg-color-rgb), 0.3),
+                                rgba(var(--main-bg-color-rgb), 0.99));
+    padding: 120px 0;
 }
 
 .hero h1 {
-    font-size: 28px;
+    font-size: 48px;
     margin: 40px 0; /* Equal spacing */
     padding-bottom: 20px;
+    font-weight: normal;
 }
 
-.hero .sun {
-    font-size: 100px;
+.best-llm {
+    box-shadow: inset 0 0 0 1000px rgba(var(--main-bg-color-rgb), 0.64);
+    background-image: url("img/kamino.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
 }
+
 
 .cta-button {
-    background: #50b3a2;
-    color: white;
+    background: var(--secondary-bg-color);
+    color: var(--main-text-color);
     padding: 20px 30px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 #features {
-    background-color: #f0f0f0;
+    background-color: var(--main-bg-color);
 }
 
 .feature:nth-child(even) {
-    background-color: rgb(208, 228, 224);
+    background-color: var(--secondary-bg-color);
+}
+
+.feature:nth-child(odd) {
+    padding: 18px 0;
 }
 
 .feature-customized {
     background-image: linear-gradient(to right,
-                                      rgba(80, 179, 162, 0.2),
-                                      rgba(80, 179, 162, 0.2),
-                                      rgba(80, 179, 162, 0.2),
-                                      rgba(208, 228, 224, 1)),
-                      url("img/Guilloud_56.png");
+                                      rgba(var(--feature-bg-color-rgb), 0.2),
+                                      rgba(var(--feature-bg-color-rgb), 0.2),
+                                      rgba(var(--feature-bg-color-rgb), 0.2),
+                                      rgba(var(--feature-bg-color-rgb), 1)),
+                      url("img/Guilloud_56_flipped.png");
     background-size: cover;
 }
 
 .feature-installation {
     background-image: linear-gradient(to left,
-                                      rgba(80, 179, 162, 0.2),
-                                      rgba(80, 179, 162, 0.2),
-                                      rgba(80, 179, 162, 0.2),
-                                      rgba(208, 228, 224, 1)),
+                                      rgba(var(--feature-bg-color-rgb), 0.2),
+                                      rgba(var(--feature-bg-color-rgb), 0.2),
+                                      rgba(var(--feature-bg-color-rgb), 0.2),
+                                      rgba(var(--feature-bg-color-rgb), 1)),
                       url("img/Faro_4122.png");
     background-size: cover;
 }
@@ -103,7 +137,7 @@ nav a {
 
 .feature-container > div {
     width: 50%;
-    padding: 30px 0;
+    padding: 48px 0;
 }
 
 .feature {
@@ -128,11 +162,11 @@ h2 {
 }
 
 #features h2 {
-    padding-top: 20px;
+    padding: 20px;
 }
 
 #pricing, #pricing h2 {
-    background: #f0f0f0;
+    background: var(--main-bg-color);
     padding: 20px;
     margin: 0;
 }
@@ -190,8 +224,8 @@ h2 {
 }
 
 footer {
-    background: #50b3a2;
-    color: white;
+    background: var(--secondary-bg-color);
+    color: var(--main-text-color);
     text-align: center;
     padding: 10px;
     position: absolute;

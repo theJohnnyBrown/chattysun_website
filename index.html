@@ -21,7 +21,7 @@
           agentUnavailableText: "We're away at the moment.",
           requireEmailUpfront: false,
           iconVariant: "outlined",
-          defaultIsOpen: true,
+          defaultIsOpen: false,
           greeting: "Hi! How can I help you?",
           baseUrl: "https://app.chattysun.com",
           iframeUrlOverride: "https://window.chattysun.com"
@@ -36,13 +36,34 @@
           // }
         },
       };
+
+      function loadScript() {
+        var existingScript = document.getElementById('chattysun-widget');
+
+        // If the script already exists, remove it
+        if (existingScript) {
+          existingScript.parentNode.removeChild(existingScript);
+          window.Papercups.config.defaultIsOpen = !window.Papercups.config.defaultIsOpen;
+        }
+
+        // Create a new script element
+        var script = document.createElement('script');
+        script.id = 'chattysun-widget';
+        script.type = 'text/javascript';
+        script.async = true;
+        script.defer = true;
+        script.src = 'https://app.chattysun.com/widget.js';
+
+        // Append the new script to the document head
+        document.head.appendChild(script);
+      }
+
+      // Load the script initially
+      loadScript();
+
+      // Set a timeout to reload the script after 15 seconds
+      setTimeout(loadScript, 15000); // 15 seconds = 15000 milliseconds
     </script>
-    <script
-      type="text/javascript"
-      async
-      defer
-      src="https://app.chattysun.com/widget.js"
-      ></script>
 
 </head>
 <body>
@@ -56,9 +77,10 @@
         </nav>
     </header>
     <section id="home" class="hero">
-        <div class="sun">🌞</div>
+      <div class="hero-inner">
         <h1>World-class Artificial Intelligence for Online Businesses</h1>
-        <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Get In Touch</a>
+        <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Get In Touch 🌞</a>
+      </div>
     </section>
 
 
@@ -74,7 +96,7 @@
             <div class="feature-customized">&nbsp;</div>
           </div>
         </div>
-        <div class="feature">
+        <div class="feature best-llm" >
               <div>
                 Uses the best LLM available today <div class="emoji">🤖</div>
               </div>
@@ -83,7 +105,7 @@
           <div class="container feature-container">
             <div class="feature-installation"></div>
             <div>
-              Setup and Installation available <div class="emoji">🔧</div>
+              Expert Setup and Installation available <div class="emoji">🔧</div>
             </div>
           </div>
         </div>
