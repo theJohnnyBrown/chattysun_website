@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>ChattySun - AI Chat for Business</title>
-
-
+    <script type="text/javascript" async defer src="/js/main.js" ></script>
     <script>
       window.Papercups = {
         config: {
@@ -41,7 +40,7 @@
         var existingScript = document.getElementById('chattysun-widget');
 
         // If the script already exists, remove it
-        if (existingScript) {
+        if (existingScript && !(sessionStorage.getItem("__PAPERCUPS__:pop_up_seen") === "true")) {
           existingScript.parentNode.removeChild(existingScript);
           window.Papercups.config.defaultIsOpen = !window.Papercups.config.defaultIsOpen;
         }
@@ -64,7 +63,6 @@
       // Set a timeout to reload the script after 15 seconds
       setTimeout(loadScript, 15000); // 15 seconds = 15000 milliseconds
     </script>
-
 </head>
 <body>
     <header>
@@ -79,7 +77,9 @@
     <section id="home" class="hero">
       <div class="hero-inner">
         <h1>World-class Artificial Intelligence for Online Businesses</h1>
-        <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Get In Touch 🌞</a>
+        <a class="cta-button" href=""
+           onClick="jacksonville.main.kobble.loginWithRedirect()"
+           >Get started 🌞</a>
       </div>
     </section>
 
@@ -117,7 +117,18 @@
             <h2>Pricing</h2>
             <div class="pricing-plans">
 
-
+            <div class="plan">
+                <h3>Trial</h3>
+                <ul>
+                    <li><span class="bullet-point">✅</span> Same advanced AI as other plans</li>
+                    <li><span class="arrow-point">▶</span> Custom bot for your business</li>
+                    <li><span class="bullet-point">✅</span> Includes all features with request limits</li>
+                    <li><span class="arrow-point">▶</span> Simple script tag for install</li>
+                </ul>
+                <div class="plan-cta">
+                  <a class="cta-button"  onClick="jacksonville.main.kobble.loginWithRedirect()">Get Started</a>
+                </div>
+            </div>
             <div class="plan">
                 <h3>Business</h3>
                 <ul>
@@ -126,6 +137,9 @@
                     <li><span class="bullet-point">✅</span> Up to 5k messages per month</li>
                     <li><span class="arrow-point">▶</span> Simple script tag for install</li>
                 </ul>
+                <div class="plan-cta">
+                  <a class="cta-button"  onClick="jacksonville.main.kobble.loginWithRedirect()">Get Started</a>
+                </div>
             </div>
             <div class="plan">
                 <h3>Corporate</h3>
@@ -136,17 +150,21 @@
                     <li><span class="arrow-point">▶</span> Highest performing AI assistant</li>
                     <li><span class="bullet-point">✅</span> Custom behavior, rules, and installation</li>
                 </ul>
+                <div class="plan-cta">
+                  <a class="cta-button"  onClick="jacksonville.main.kobble.loginWithRedirect()">Get Started</a>
+                </div>
             </div>
             <div class="plan">
                 <h3>Enterprise</h3>
                 <ul>
                     <li><span class="bullet-point">✅</span> Certified vendor process</li>
                     <li><span class="arrow-point">▶</span> High Throughput</li>
-                    <li><span class="bullet-point">✅</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Contact sales</a> if you need more</li>
+                    <li><span class="bullet-point">✅</span> Customized to your needs</li>
                 </ul>
+                <div class="plan-cta">
+                  <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Contact Sales</a>
+                </div>
             </div>
-
-                <!-- ... pricing plans ... -->
             </div>
         </div>
     </section>
