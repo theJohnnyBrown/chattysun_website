@@ -1,0 +1,26 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  --background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+  padding: 25px 0;
+
+  .swiper {
+    padding: 10px 0;
+  }
+
+  .swiper-wrapper {
+    height: auto;
+  }
+
+  .swiper-slide {
+    img {
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

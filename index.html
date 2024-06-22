@@ -1,176 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>ChattySun - AI Chat for Business</title>
-    <script type="text/javascript" async defer src="/js/main.js" ></script>
-    <script>
-      window.Papercups = {
-        config: {
-          token: "00659625-744c-4e98-b47a-3fd47437b6f1",
-          inbox: "8f28977e-255f-4a9b-9c7c-b95ed926d997",
-          title: "Welcome to Chattysun",
-          subtitle: "Ask us anything in the chat window below 😊",
-          primaryColor: "#1890ff",
-          newMessagePlaceholder: "Start typing...",
-          showAgentAvailability: false,
-          agentAvailableText: "We're online right now!",
-          agentUnavailableText: "We're away at the moment.",
-          requireEmailUpfront: false,
-          iconVariant: "outlined",
-          defaultIsOpen: false,
-          greeting: "Hi! How can I help you?",
-          baseUrl: "https://app.chattysun.com",
-          iframeUrlOverride: "https://window.chattysun.com"
-          // Optionally include data about your customer here to identify them
-          // customer: {
-          //   name: __CUSTOMER__.name,
-          //   email: __CUSTOMER__.email,
-          //   external_id: __CUSTOMER__.id,
-          //   metadata: {
-          //     plan: "premium"
-          //   }
-          // }
-        },
-      };
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Easy AI For Your Website</title>
+  <meta content="chatbots for online business, e-commerce, saas" name="description">
+  <meta content="easy AI, friendly AI, friendly Chatbot, AI chat support" name="keywords">
 
-      function loadScript() {
-        var existingScript = document.getElementById('chattysun-widget');
+  <!-- Favicons -->
+  <link href="/favicon.ico" rel="icon">
+  <link href="/favicon.ico" rel="apple-touch-icon">
 
-        // If the script already exists, remove it
-        if (existingScript && !(sessionStorage.getItem("__PAPERCUPS__:pop_up_seen") === "true")) {
-          existingScript.parentNode.removeChild(existingScript);
-          window.Papercups.config.defaultIsOpen = !window.Papercups.config.defaultIsOpen;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        // Create a new script element
-        var script = document.createElement('script');
-        script.id = 'chattysun-widget';
-        script.type = 'text/javascript';
-        script.async = true;
-        script.defer = true;
-        script.src = 'https://app.chattysun.com/widget.js';
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        // Append the new script to the document head
-        document.head.appendChild(script);
-      }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-      // Load the script initially
-      loadScript();
+  <!-- =======================================================
+  * Template Name: BizLand
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Updated: Jun 14 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 
-      // Set a timeout to reload the script after 15 seconds
-      setTimeout(loadScript, 15000); // 15 seconds = 15000 milliseconds
-    </script>
+  <script>
+    window.Papercups = {
+      config: {
+        token: "f3b0fddf-d3bd-4908-b6f4-b874950bdf17",
+        inbox: "5fa722e9-714a-4801-ad06-0d4c1d7d36aa",
+        title: "Welcome to Example Insurance",
+        subtitle: "Ask us anything in the chat window below 😊",
+        primaryColor: "#1890ff",
+        newMessagePlaceholder: "Start typing...",
+        showAgentAvailability: false,
+        agentAvailableText: "We're online right now!",
+        agentUnavailableText: "We're away at the moment.",
+        requireEmailUpfront: false,
+        iconVariant: "outlined",
+        baseUrl: "https://app.chattysun.com",
+        iframeUrlOverride: "https://window.chattysun.com"
+        // Optionally include data about your customer here to identify them
+        // customer: {
+        //   name: __CUSTOMER__.name,
+        //   email: __CUSTOMER__.email,
+        //   external_id: __CUSTOMER__.id,
+        //   metadata: {
+        //     plan: "premium"
+        //   }
+        // }
+      },
+    };
+  </script>
+  <script
+    type="text/javascript"
+    async
+    defer
+    src="https://app.chattysun.com/widget.js"
+    ></script>
 </head>
-<body>
-    <header>
-        <div class="logo">ChattySun</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Contact Us</a>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Chattysun</h1>
+          <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" >Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-    </header>
-    <section id="home" class="hero">
-      <div class="hero-inner">
-        <h1>World-class Artificial Intelligence for Online Businesses</h1>
-        <a class="cta-button" href=""
-           onClick="jacksonville.main.kobble.loginWithRedirect()"
-           >Get started 🌞</a>
+
       </div>
-    </section>
 
+    </div>
 
-    <section id="features">
-        <div class="container">
-            <h2>Features</h2>
-        </div>
-        <div class="feature">
-          <div class="container feature-container">
-            <div>
-              We customize an AI trained to work for you <div class="emoji">💻</div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" >
+            <h1>The Easiest Way <span>To Leverage AI</span></h1>
+            <p>We provide an interface to the best LLMs available, trained for your website.</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Get Started</a>
             </div>
-            <div class="feature-customized">&nbsp;</div>
           </div>
         </div>
-        <div class="feature best-llm" >
-              <div>
-                Uses the best LLM available today <div class="emoji">🤖</div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <div class="service-item position-relative">
+              <div class="icon">🤖</div>
+              <h4><a href="https://app.chattysun.com/login" class="stretched-link">Custom AI</a></h4>
+              <p>Customize an AI trained to work on your business, with your data. In your dashboard you can add any instructions, putting you in control.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" >
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="https://app.chattysun.com/login" class="stretched-link">Complete Visibility</a></h4>
+              <p>Monitor your AI in action with our backend dashboard, where you
+              can view all messages and intervene when circumstances dictate</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" >
+            <div class="service-item position-relative">
+              <div class="icon">🌞</div>
+              <h4><a href="https://app.chattysun.com/login" class="stretched-link">Easy Setup</a></h4>
+              <p>You can <a href="https://app.chattysun.com/login">log in</a> and get started right away. Our straightforward integration delivers an AI experience in just a few minutes.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" >
+            <div class="service-item position-relative">
+              <div class="icon">🔧</div>
+              <h4><a href="https://app.chattysun.com/login" class="stretched-link">Fully Supported</a></h4>
+              <p>We are happy to answer any questions about setup, installation
+              or integration you may have. We provide assistance and support until you succeed.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" >
+        <p><span>Find Out More</span> <span class="description-title">About Us</span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+          <div class="col-lg-6" >
+            <img src="assets/img/about.jpg" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" >
+            <div class="about-content ps-0 ps-lg-3">
+              <h3>Discover how we revolutionize customer service with AI:</h3>
+              <p class="fst-italic">
+                Delivering a superior customer service experience with a smart, responsive AI assistant.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-diagram-3"></i>
+                  <div>
+                    <h4>Always available, never miss an opportunity to connect with your audience</h4>
+                    <p>Our AI assistant will be available day and night, alway eager to provide guidance and inform customers about your benefits.</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-fullscreen-exit"></i>
+                  <div>
+                    <h4>Our Mission</h4>
+                    <p>To empower online businesses by providing advanced AI-driven customer service solutions that are easy to implement and customize, ensuring every interaction is efficient and personalized.</p>
+                  </div>
+                </li>
+              </ul>
+              <p>
+                Chattysun is made with thoughtful care in the United States. We
+                are committed to providing you the best sales and service AI
+                available in a convenient package. You will experience easy
+                integration, responsive support, and full customization to the
+                needs of your business.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+        <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Pricing</span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>Free</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li>Custom bot for your website</li>
+                <li>Easy setup and chat interface</li>
+                <li>Includes all features with request limits</li>
+                <li>Simple script tag for install</li>
+              </ul>
+              <div class="btn-spacer">
+                <div class="btn-wrap">
+                  <a href="https://app.chattysun.com/login" class="btn-buy">Start Free</a>
+                </div>
               </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <h3>Business</h3>
+              <h4><sup>$</sup>49.99<span> / month</span></h4>
+              <ul>
+                <li>Custom bot for your business</li>
+                <li>Up to 5k messages per month</li>
+                <li>Best available AI</li>
+                <li>Easy script tag install</li>
+              </ul>
+              <div class="btn-spacer">
+                <div class="btn-wrap">
+                  <a href="#" class="btn-buy">Get Started</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="pricing-item">
+              <h3>Corporate</h3>
+              <h4><sup>$</sup>199.99<span> / month</span></h4>
+              <ul>
+                <li>Up to 20k messages per month</li>
+                <li>Precisely tailored instructions</li>
+                <li>Highest performing AI assistant</li>
+                <li>Custom behavior, rules, and installation</li>
+              </ul>
+              <div class="btn-spacer">
+                <div class="btn-wrap">
+                  <a href="https://app.chattysun.com/login" class="btn-buy">Get Started</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="pricing-item">
+              <span class="advanced">Advanced</span>
+              <h3>Enterprise</h3>
+              <ul>
+                <li>Certified vendor process</li>
+                <li>High Throughput</li>
+                <li>Custom integration</li>
+                <li>Hosted or on-premise</li>
+                <li>Compliance Solutions</li>
+              </ul>
+              <div class="btn-spacer">
+                <div class="btn-wrap">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link"
+                     class="btn-buy">Get in Touch</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
         </div>
-        <div class="feature">
-          <div class="container feature-container">
-            <div class="feature-installation"></div>
-            <div>
-              Expert Setup and Installation available <div class="emoji">🔧</div>
-            </div>
-          </div>
-        </div>
 
-    </section>
+      </div>
 
-    <section id="pricing">
-        <div class="container">
-            <h2>Pricing</h2>
-            <div class="pricing-plans">
+    </section><!-- /Pricing Section -->
 
-            <div class="plan">
-                <h3>Trial</h3>
-                <ul>
-                    <li><span class="bullet-point">✅</span> Same advanced AI as other plans</li>
-                    <li><span class="arrow-point">▶</span> Custom bot for your business</li>
-                    <li><span class="bullet-point">✅</span> Includes all features with request limits</li>
-                    <li><span class="arrow-point">▶</span> Simple script tag for install</li>
-                </ul>
-                <div class="plan-cta">
-                  <a class="cta-button"  onClick="jacksonville.main.kobble.loginWithRedirect()">Get Started</a>
-                </div>
-            </div>
-            <div class="plan">
-                <h3>Business</h3>
-                <ul>
-                    <li><span class="bullet-point">✅</span> $49.99 per month</li>
-                    <li><span class="arrow-point">▶</span> Custom bot for your business</li>
-                    <li><span class="bullet-point">✅</span> Up to 5k messages per month</li>
-                    <li><span class="arrow-point">▶</span> Simple script tag for install</li>
-                </ul>
-                <div class="plan-cta">
-                  <a class="cta-button"  onClick="jacksonville.main.kobble.loginWithRedirect()">Get Started</a>
-                </div>
-            </div>
-            <div class="plan">
-                <h3>Corporate</h3>
-                <ul>
-                    <li><span class="bullet-point">✅</span> $199.99 per month</li>
-                    <li><span class="arrow-point">▶</span> Up to 20k messages per month</li>
-                    <li><span class="bullet-point">✅</span> Precisely tailored instructions</li>
-                    <li><span class="arrow-point">▶</span> Highest performing AI assistant</li>
-                    <li><span class="bullet-point">✅</span> Custom behavior, rules, and installation</li>
-                </ul>
-                <div class="plan-cta">
-                  <a class="cta-button"  onClick="jacksonville.main.kobble.loginWithRedirect()">Get Started</a>
-                </div>
-            </div>
-            <div class="plan">
-                <h3>Enterprise</h3>
-                <ul>
-                    <li><span class="bullet-point">✅</span> Certified vendor process</li>
-                    <li><span class="arrow-point">▶</span> High Throughput</li>
-                    <li><span class="bullet-point">✅</span> Customized to your needs</li>
-                </ul>
-                <div class="plan-cta">
-                  <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSf3keN5akKs79S3yJa520oCM4qBGE3D7UdI2-SMkvApa-MoAQ/viewform?usp=sf_link">Contact Sales</a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2023 Sunshine Technology Programs LLC | All rights reserved</p>
-    </footer>
+    <!-- Team Section -->
+    <!-- <section id="team" class="team section"> -->
+
+    <!--   <\!-- Section Title -\-> -->
+    <!--   <div class="container section-title" > -->
+    <!--     <h2>Team</h2> -->
+    <!--     <p><span>Our Hardworking</span> <span class="description-title">Team</span></p> -->
+    <!--   </div><\!-- End Section Title -\-> -->
+
+    <!--   <div class="container"> -->
+
+    <!--     <div class="row gy-4"> -->
+
+    <!--       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" > -->
+    <!--         <div class="team-member"> -->
+    <!--           <div class="member-img"> -->
+    <!--             <img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""> -->
+    <!--             <div class="social"> -->
+    <!--               <a href=""><i class="bi bi-twitter-x"></i></a> -->
+    <!--               <a href=""><i class="bi bi-facebook"></i></a> -->
+    <!--               <a href=""><i class="bi bi-instagram"></i></a> -->
+    <!--               <a href=""><i class="bi bi-linkedin"></i></a> -->
+    <!--             </div> -->
+    <!--           </div> -->
+    <!--           <div class="member-info"> -->
+    <!--             <h4>Walter White</h4> -->
+    <!--             <span>Chief Executive Officer</span> -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </div><\!-- End Team Member -\-> -->
+
+    <!--       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" > -->
+    <!--         <div class="team-member"> -->
+    <!--           <div class="member-img"> -->
+    <!--             <img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""> -->
+    <!--             <div class="social"> -->
+    <!--               <a href=""><i class="bi bi-twitter-x"></i></a> -->
+    <!--               <a href=""><i class="bi bi-facebook"></i></a> -->
+    <!--               <a href=""><i class="bi bi-instagram"></i></a> -->
+    <!--               <a href=""><i class="bi bi-linkedin"></i></a> -->
+    <!--             </div> -->
+    <!--           </div> -->
+    <!--           <div class="member-info"> -->
+    <!--             <h4>Sarah Jhonson</h4> -->
+    <!--             <span>Product Manager</span> -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </div><\!-- End Team Member -\-> -->
+
+    <!--       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" > -->
+    <!--         <div class="team-member"> -->
+    <!--           <div class="member-img"> -->
+    <!--             <img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""> -->
+    <!--             <div class="social"> -->
+    <!--               <a href=""><i class="bi bi-twitter-x"></i></a> -->
+    <!--               <a href=""><i class="bi bi-facebook"></i></a> -->
+    <!--               <a href=""><i class="bi bi-instagram"></i></a> -->
+    <!--               <a href=""><i class="bi bi-linkedin"></i></a> -->
+    <!--             </div> -->
+    <!--           </div> -->
+    <!--           <div class="member-info"> -->
+    <!--             <h4>William Anderson</h4> -->
+    <!--             <span>CTO</span> -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </div><\!-- End Team Member -\-> -->
+
+    <!--       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" > -->
+    <!--         <div class="team-member"> -->
+    <!--           <div class="member-img"> -->
+    <!--             <img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""> -->
+    <!--             <div class="social"> -->
+    <!--               <a href=""><i class="bi bi-twitter-x"></i></a> -->
+    <!--               <a href=""><i class="bi bi-facebook"></i></a> -->
+    <!--               <a href=""><i class="bi bi-instagram"></i></a> -->
+    <!--               <a href=""><i class="bi bi-linkedin"></i></a> -->
+    <!--             </div> -->
+    <!--           </div> -->
+    <!--           <div class="member-info"> -->
+    <!--             <h4>Amanda Jepson</h4> -->
+    <!--             <span>Accountant</span> -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </div><\!-- End Team Member -\-> -->
+
+    <!--     </div> -->
+
+    <!--   </div> -->
+
+    <!-- </section><\!-- /Team Section -\-> -->
+
+
+    <!-- Faq Section -->
+    <!-- <section id="faq" class="faq section"> -->
+
+    <!--   <\!-- Section Title -\-> -->
+    <!--   <div class="container section-title" > -->
+    <!--     <h2>F.A.Q</h2> -->
+    <!--     <p><span>Frequently Asked</span> <span class="description-title">Questions</span></p> -->
+    <!--   </div><\!-- End Section Title -\-> -->
+
+    <!--   <div class="container"> -->
+
+    <!--     <div class="row justify-content-center"> -->
+
+    <!--       <div class="col-lg-10" > -->
+
+    <!--         <div class="faq-container"> -->
+
+    <!--           <div class="faq-item faq-active"> -->
+    <!--             <h3>Non consectetur a erat nam at lectus urna duis?</h3> -->
+    <!--             <div class="faq-content"> -->
+    <!--               <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p> -->
+    <!--             </div> -->
+    <!--             <i class="faq-toggle bi bi-chevron-right"></i> -->
+    <!--           </div><\!-- End Faq item-\-> -->
+
+    <!--           <div class="faq-item"> -->
+    <!--             <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3> -->
+    <!--             <div class="faq-content"> -->
+    <!--               <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p> -->
+    <!--             </div> -->
+    <!--             <i class="faq-toggle bi bi-chevron-right"></i> -->
+    <!--           </div><\!-- End Faq item-\-> -->
+
+    <!--           <div class="faq-item"> -->
+    <!--             <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3> -->
+    <!--             <div class="faq-content"> -->
+    <!--               <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p> -->
+    <!--             </div> -->
+    <!--             <i class="faq-toggle bi bi-chevron-right"></i> -->
+    <!--           </div><\!-- End Faq item-\-> -->
+
+    <!--           <div class="faq-item"> -->
+    <!--             <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3> -->
+    <!--             <div class="faq-content"> -->
+    <!--               <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p> -->
+    <!--             </div> -->
+    <!--             <i class="faq-toggle bi bi-chevron-right"></i> -->
+    <!--           </div><\!-- End Faq item-\-> -->
+
+    <!--           <div class="faq-item"> -->
+    <!--             <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3> -->
+    <!--             <div class="faq-content"> -->
+    <!--               <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p> -->
+    <!--             </div> -->
+    <!--             <i class="faq-toggle bi bi-chevron-right"></i> -->
+    <!--           </div><\!-- End Faq item-\-> -->
+
+    <!--           <div class="faq-item"> -->
+    <!--             <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3> -->
+    <!--             <div class="faq-content"> -->
+    <!--               <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p> -->
+    <!--             </div> -->
+    <!--             <i class="faq-toggle bi bi-chevron-right"></i> -->
+    <!--           </div><\!-- End Faq item-\-> -->
+
+    <!--         </div> -->
+
+    <!--       </div><\!-- End Faq Column-\-> -->
+
+    <!--     </div> -->
+
+    <!--   </div> -->
+
+    <!-- </section><\!-- /Faq Section -\-> -->
+
+    <!-- Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer">
+
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Sunshine Technology Programs, LLC</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
