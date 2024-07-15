@@ -830,7 +830,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--contrast-color), transparent 70%);
+  /* background: color-mix(in srgb, var(--contrast-color), transparent 70%); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -906,6 +906,11 @@ section,
 
 .hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+#hero .order-lg-1 {
+  background-color: rgb(255, 255, 255, 0.4);
+  padding: 24px;
 }
 
 @media (max-width: 640px) {
