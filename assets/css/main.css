@@ -2016,6 +2016,7 @@ section,
     width: 100%;
     height: 100%;
     position: relative;
+    min-height: 556px;
 }
 
 .promo-video-container iframe {
