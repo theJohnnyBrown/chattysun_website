@@ -112,6 +112,38 @@
                  src="https://www.facebook.com/tr?id=1232751488042579&ev=PageView&noscript=1"
                  /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- ===================================================================================== -->
+  <!-- Google Tracking Code -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16976180932">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16976180932');
+  </script>
+
+  <script>
+    function trackConversion(link) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16976180932/chattysun_convert',
+        'event_callback': function() {
+          window.location = link.href;
+        }
+      });
+
+      setTimeout(function() {
+        window.location = link.href;
+      }, 300);
+
+      return false;
+    }
+  </script>
+  <!-- End google tracking code -->
+
+
 </head>
 
 <body class="index-page">
@@ -155,7 +187,7 @@
             <h1>The Easiest Way <span>To Leverage AI</span></h1>
             <p>We provide an interface to the best LLMs available, trained for your website.</p>
             <div class="d-flex">
-              <a href="https://app.chattysun.com/login" class="btn-get-started">Get Started</a>
+              <a href="https://app.chattysun.com/login" class="btn-get-started" onclick="return trackConversion(this);">Get Started</a>
             </div>
           </div>
         </div>
@@ -191,7 +223,7 @@
             <div class="service-item position-relative">
               <div class="icon">🌞</div>
               <h4><a href="https://app.chattysun.com/login" class="stretched-link">Easy Setup</a></h4>
-              <p>You can <a href="https://app.chattysun.com/login">log in</a> and get started right away. Our straightforward integration delivers an AI experience in just a few minutes.</p>
+              <p>You can <a href="https://app.chattysun.com/login" onclick="return trackConversion(this);">log in</a> and get started right away. Our straightforward integration delivers an AI experience in just a few minutes.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -315,7 +347,7 @@
               </ul>
               <div class="btn-spacer">
                 <div class="btn-wrap">
-                  <a href="https://app.chattysun.com/login" class="btn-buy">Get Started</a>
+                  <a href="https://app.chattysun.com/login" class="btn-buy" onclick="return trackConversion(this);">Get Started</a>
                 </div>
               </div>
             </div>
@@ -333,7 +365,7 @@
               </ul>
               <div class="btn-spacer">
                 <div class="btn-wrap">
-                  <a href="https://app.chattysun.com/login" class="btn-buy">Get Started</a>
+                  <a href="https://app.chattysun.com/login" class="btn-buy" onclick="return trackConversion(this);">Get Started</a>
                 </div>
               </div>
             </div>
