@@ -125,20 +125,25 @@
     gtag('config', 'AW-16976180932');
   </script>
 
+
   <script>
-    function trackConversion(link) {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16976180932/chattysun_convert',
-        'event_callback': function() {
-          window.location = link.href;
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
         }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16976180932/cvnnCJH247MaEMTt754_',
+        'value': 1.0,
+        'currency': 'USD',
+        'transaction_id': '',
+        'event_callback': callback
       });
-
-      setTimeout(function() {
-        window.location = link.href;
-      }, 300);
-
       return false;
+    }
+    function trackConversion(link) {
+      return gtag_report_conversion(link.href);
     }
   </script>
   <!-- End google tracking code -->
